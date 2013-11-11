@@ -76,7 +76,7 @@ class users_controller extends base_controller {
 	    
 	    #Success
 	    if($token){
-	    	setcookie('token',$token,strtotime('+5 minutes'),'/');
+	    	setcookie('token',$token,strtotime('+5 days'),'/');
 		    Router::redirect('/');
 		    
 	    }
