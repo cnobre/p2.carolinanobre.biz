@@ -8,14 +8,13 @@ class posts_controller extends base_controller {
 	
 	public function add(){
 		
-		$this->template = View::instance("v_posts_add");
+		$this->template->content = View::instance("v_posts_add");
 		
 		echo $this->template;
 	}
 	
 	public function p_add() {
 		
-/* 		 print_r($_POST); */
 
 		$_POST['user_id'] = $this->user->user_id;
 		$_POST['created'] = Time::now();
@@ -23,8 +22,8 @@ class posts_controller extends base_controller {
 		
 		DB::instance(DB_NAME)->insert('posts',$_POST);
 		
-		# Quick and dirty feedback
-        echo "Your post has been added. <a href='/posts/add'>Add another</a>";		
+	    Router::redirect("/posts");
+/*         echo "Your post has been added. <a href='/posts/add'>Add another</a>";		 */
 	}
 	
 	

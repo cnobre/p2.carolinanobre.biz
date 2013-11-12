@@ -5,9 +5,11 @@ class users_controller extends base_controller {
         parent::__construct();
     } 
 
+/*
     public function index() {
         echo "This is the index page";
     }
+*/
 
     public function signup() {
     
@@ -39,19 +41,24 @@ class users_controller extends base_controller {
 		
 		/* REDIRECT TO HOME PAGE*/ 
 		
-		//ROUTER::redirect('/users/login');
+		ROUTER::redirect('/users/login');
 		
 		
 	}
-    public function login() {
-        #Set up the view
-        $this->template->content = View::instance('v_users_login');
-        
-        #Render the view
-        echo $this->template;
+	
+    public function login($error = NULL) {
 
-    }
-    
+	    # Set up the view
+	    $this->template->content = View::instance("v_users_login");
+	
+	    # Pass data to the view
+	    $this->template->content->error = $error;
+	
+	    # Render the view
+	    echo $this->template;
+
+	}   
+	 
     public function p_login(){
 	    
 		
@@ -68,9 +75,6 @@ class users_controller extends base_controller {
 		WHERE email = "'.$_POST['email'].'" 
 		AND password = "'.$_POST['password'].'"' ;
 		
-/* 		echo $q; */
-		
-/* 		DB::instance(DB_NAME)->select_row($q); */
 	    
 	    $token = DB::instance(DB_NAME)-> select_field($q);
 	    
@@ -82,12 +86,53 @@ class users_controller extends base_controller {
 	    }
 	    #Fail
 	    else{
-		    echo "Login failed!";
+		    Router::redirect("/users/login/error");
 		    
 	    }
 	    
 /* 	    echo($token); */
     }
+
+
+public function reset($error = NULL) {
+
+	    # Set up the view
+	    $this->template->content = View::instance("v_users_reset");
+	
+	    # Pass data to the view
+	    $this->template->content->error = $error;
+	
+	    # Render the view
+	    echo $this->template;
+
+	}   
+	 
+    public function p_reset(){
+	    
+		
+		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+		$new_password = sha1(PASSWORD_SALT.$_POST['new_password']);
+		
+		$d = Array("password" => $new_password);
+		$where_condition = 'WHERE user_id = '.$this->user->user_id;
+		$insert  = DB::instance(DB_NAME)->update("users", $d, $where_condition);
+	
+				    
+	    #Success
+	    if($insert){
+		    Router::redirect('/');
+		    
+	    }
+	    #Fail
+	    else{
+		    Router::redirect("/users/reset/error");
+		    
+	    }
+	    
+/* 	    echo($token); */
+    }
+
+
 
     public function logout() {
         $new_token =sha1(TOKEN_SALT.$this->user->email.Utils::generate_random_string());

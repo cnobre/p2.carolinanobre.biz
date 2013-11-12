@@ -1,4 +1,4 @@
-<h2> Sign Up</h2>
+<h1> Sign Up</h1>
 
 <form method ='POST' action = '/users/p_signup'>
 
