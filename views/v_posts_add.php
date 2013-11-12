@@ -1,9 +1,9 @@
 <form method='POST' action='/posts/p_add'>
 
-    <label for='content'>New Post:</label><br>
-    <textarea name='content' id='content'></textarea>
+    <text for='content'>New Post:</text><br>
+    <textarea class = "post_box" name='content' id='content'></textarea>
 
     <br><br>
-    <input type='submit' value='New post'>
+    <input type='submit' value='Post!'>
 
 </form> 

@@ -13,7 +13,7 @@
 
     <?php if(isset($error)): ?>
         <div class='error'>
-            Reset failed. Please double check your old password and insert a non empty new password.
+            Reset failed. Please double check your old password and insert a non-empty new password.
         </div>
         <br>
     <?php endif; ?>

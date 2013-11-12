@@ -20,10 +20,16 @@ class posts_controller extends base_controller {
 		$_POST['created'] = Time::now();
 		$_POST['modified'] =Time::now();
 		
-		DB::instance(DB_NAME)->insert('posts',$_POST);
+		if("" == trim($_POST['content'])){
+			Router::redirect("/posts/add");
+		} 
+		else{
 		
-	    Router::redirect("/posts");
-/*         echo "Your post has been added. <a href='/posts/add'>Add another</a>";		 */
+			DB::instance(DB_NAME)->insert('posts',$_POST);
+		
+		    Router::redirect("/posts");	
+		}	
+	
 	}
 	
 	
@@ -57,8 +63,6 @@ public function index() {
 
     # Render the View
     echo $this->template;
-
-
 
 
 }

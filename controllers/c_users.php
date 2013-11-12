@@ -11,10 +11,14 @@ class users_controller extends base_controller {
     }
 */
 
-    public function signup() {
+    public function signup($error = NULL) {
     
     	#Set up the view
         $this->template->content = View::instance('v_users_signup');
+        
+        # Pass data to the view
+	    $this->template->content->error = $error;
+	
         
         #Render the view
         echo $this->template;
@@ -22,26 +26,23 @@ class users_controller extends base_controller {
 
 
 	public function p_signup() {
-	
-		/*echo "<pre>";
-		print_r($_POST);
-		echo "<pre>";
-		*/
+
+		# Checking for empty fields
+		if("" == trim($_POST['first_name']) || "" == trim($_POST['last_name']) || "" == trim($_POST['email']) || "" == trim($_POST['password'])){
+			Router::redirect("/users/signup/error");
+		} 
 		
 		$_POST['created'] = Time::now();
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 		
-		echo "<pre>";
-		print_r($_POST);
-		echo "<pre>";
-		
+
 		
 		DB::instance(DB_NAME)->insert_row('users',$_POST);
 		
 		/* REDIRECT TO HOME PAGE*/ 
 		
-		ROUTER::redirect('/users/login');
+		ROUTER::redirect('/');
 		
 		
 	}
@@ -64,33 +65,34 @@ class users_controller extends base_controller {
 		
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		
-		/*
-		echo "<pre>";
-		print_r($_POST);
-		echo "<pre>";
-		*/
+		# Checking for empty fields
+		if("" == trim($_POST['email']) || "" == trim($_POST['password'])){
+			Router::redirect("/users/login/error");
+		} 
+
+		else{
 		
-		$q = 'SELECT token
-		FROM users
-		WHERE email = "'.$_POST['email'].'" 
-		AND password = "'.$_POST['password'].'"' ;
+			$q = 'SELECT token
+			FROM users
+			WHERE email = "'.$_POST['email'].'" 
+			AND password = "'.$_POST['password'].'"' ;
+			
+		    
+		    $token = DB::instance(DB_NAME)-> select_field($q);
+		    
+		    #Success
+		    if($token){
+		    	setcookie('token',$token,strtotime('+5 days'),'/');
+			    Router::redirect('/');
+			    
+		    }
+		    #Fail
+		    else{
+			    Router::redirect("/users/login/error");
+			    
+		    }
+		}
 		
-	    
-	    $token = DB::instance(DB_NAME)-> select_field($q);
-	    
-	    #Success
-	    if($token){
-	    	setcookie('token',$token,strtotime('+5 days'),'/');
-		    Router::redirect('/');
-		    
-	    }
-	    #Fail
-	    else{
-		    Router::redirect("/users/login/error");
-		    
-	    }
-	    
-/* 	    echo($token); */
     }
 
 
@@ -109,6 +111,11 @@ public function reset($error = NULL) {
 	 
     public function p_reset(){
 	    
+	    # Checking for empty fields
+	    if("" == trim($_POST['password']) || "" == trim($_POST['new_password'])){
+			Router::redirect("/users/reset/error");
+		} 
+
 		
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		$new_password = sha1(PASSWORD_SALT.$_POST['new_password']);
@@ -117,7 +124,7 @@ public function reset($error = NULL) {
 		$where_condition = 'WHERE user_id = '.$this->user->user_id;
 		$insert  = DB::instance(DB_NAME)->update("users", $d, $where_condition);
 	
-				    
+	    				    
 	    #Success
 	    if($insert){
 		    Router::redirect('/');

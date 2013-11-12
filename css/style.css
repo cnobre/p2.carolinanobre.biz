@@ -121,6 +121,11 @@ img.box_img{
 	text-align:center;
 	padding:20px 0 0 0;
 }
+.post_box{
+	width:780px;
+	height:100px;
+	font-size: 14px;
+}
 .read_more{
 	width:101px;
 	height:29px;
