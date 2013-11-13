@@ -153,33 +153,13 @@ public function reset($error = NULL) {
         Router::redirect('/');
     }
 
-    public function profile($user_name = NULL) {
+    public function profile(){
     
-    	if (!$this->user){
-/* 	    	Router::redirect('/'); */
-			die ('Members only');	    	
-	    	
-    	}
-    	else {
-	    	die('Members only. <a href="/users/login"> Login </a>');
-    	}
     
        $this->template->content = View::instance('v_users_profile');
        $this->template->title = 'Profile';
-       
-       $client_files_head = Array(
-       '/css/profile.css'
-       );
-       
-       $this->template->client_files_head = Utils::load_client_files($client_files_head);
-       
-       $client_files_body = Array(
-       '/js/profile.js'
-       );
-       
-       $this->template->client_files_body = Utils::load_client_files($client_files_body);
-       
-       $this ->template -> content ->user_name = $user_name;
+     
+/*        $this ->template -> content ->user_name = $user->first_name;; */
        echo $this->template;
       
     }

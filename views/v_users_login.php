@@ -1,7 +1,7 @@
 
 
 <h1> Log In </h1>
-<form method='POST' action='/users/p_login'>
+<form method='POST' action='/users/p_login' >
 
     Email<br>
     <input type='text' name='email'>    

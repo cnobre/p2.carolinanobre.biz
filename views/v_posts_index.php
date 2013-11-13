@@ -1,10 +1,16 @@
+<!-- <div id="left_content"> -->
+        <h1>Latest Posts </h1> 
+        
 <?php foreach($posts as $post): ?>
 
 <article>
 
-    <h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1>
-
-    <p><?=$post['content']?></p>
+   <div class="news">
+        	            <div class="news_content">    
+<span><?=$post['first_name']?> <?=$post['last_name']?> posted:</span><br />
+ <p><?=$post['content']?></p>			</div>
+        </div>  
+        
 
     <time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
         <?=Time::display($post['created'])?>

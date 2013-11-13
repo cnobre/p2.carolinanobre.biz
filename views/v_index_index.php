@@ -10,13 +10,12 @@ else:?>
 	<p class="white">
 	"Please Sign Up or Login to get started!" 
 	</p>
-	<!--
-<div class="read_more"><a href = '/users/signup'>Sign Up</a></div>
-	<div class="read_more"><a href = '/users/login'>Login</a></div>
--->
 	
-
 <?php endif; ?>
+
+<br><br>
+<img src="images/birds.png" width = "860px" alt="" title="">  
+	
 
 	 
  

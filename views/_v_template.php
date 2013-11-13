@@ -16,7 +16,7 @@
 
 <div id="main_container">
 	<div id="header">
-    	<div id="logo"></div>
+    	<div id="logo"><a href="/"><img src="/images/logo.png" height = "50px" alt="" title="" border="0"></a></div>
         
         
           <div id="menu">
@@ -28,8 +28,9 @@
 					<li><a href = '/posts/add'> Add Post</a></li>
 					<li><a href = '/posts'> View Posts</a></li>
 					<li><a href = '/posts/users'> Follow Users</a></li>
-					<li><a href = '/users/logout'> Logout</a></li>
 					<li><a href = '/users/reset'> Reset Password</a></li>
+					<li><a href = '/users/profile'> View/Edit Profile</a></li>
+					<li><a href = '/users/logout'> Logout</a></li>
 				<?php else: ?>
 					<li><a href = '/users/signup'> Sign up</a></li>
 					<li><a href = '/users/login'> Login</a></li>

@@ -74,7 +74,8 @@ img.box_img{
 }
 .error{
 	color:red;
-	font-size: 18px;
+	font-size: 16px;
+/* 	height:20px; */
 	background-color: white;
 }
 /*----------------------menu-------------------------*/
@@ -86,7 +87,7 @@ img.box_img{
 	background-color:#416271;
 }
 #menu ul{
-	list-style:none;padding:0 0 0 230px;margin: auto;display:block;
+	list-style:none;padding:0 0 0 130px;margin: auto;display:block;
 }
 #menu ul li{
 	list-style:none;display:inline;float:left;width:auto;height:42px;padding:0px;line-height:42px; font-family:Arial, Helvetica, sans-serif; font-size:13px;
@@ -119,7 +120,7 @@ img.box_img{
 	width:auto;
 	/* float:left; */
 	text-align:center;
-	padding:20px 0 0 0;
+	padding:20px 0 0 40px;
 }
 .post_box{
 	width:780px;
@@ -175,12 +176,13 @@ img.box_img{
 	clear:both;
 }
 #left_content{
-	width:320px;
+	width:90%;
 	height:auto;
-	margin:10px;
+	margin:20px;
+	margin-left: 30px;
 	float:left;
-	padding:10px;
-	background:url(../images/left_content_bg.gif) repeat-x top;
+	padding:20px;
+/* 	background:url(../images/left_content_bg.gif) repeat-x top; */
 }
 #right_content{
 	width:490px;
@@ -274,7 +276,7 @@ input.submit{
 	line-height:13px;
 }
 .news_content span{
-	color:#4ab7e8;
+	color:black;
 }
 .services_box{
 	height:120px;
@@ -330,19 +332,19 @@ input.submit{
 
 /*-----------------------contact_form-------------------*/
 #contact_form{
-	width:310px;
+	width:350px;
 	height:auto;
-	padding:10px 0 0 60px;
+	padding:10px 0 0 220px;
 }
 .form_row{
 	float:left;
 	padding:4px 0 4px 0;
 }
 label{
-	width:70px;
+	width:110px;
 	float:left;
 	padding:3px 5px 0 0;
-	color:#59a5bf;
+	color:white;
 	text-align:right;
 }
 input.contact_input{
