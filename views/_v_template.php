@@ -29,7 +29,6 @@
 					<li><a href = '/posts'> View Posts</a></li>
 					<li><a href = '/posts/users'> Follow Users</a></li>
 					<li><a href = '/users/reset'> Reset Password</a></li>
-					<li><a href = '/users/profile'> View/Edit Profile</a></li>
 					<li><a href = '/users/logout'> Logout</a></li>
 				<?php else: ?>
 					<li><a href = '/users/signup'> Sign up</a></li>

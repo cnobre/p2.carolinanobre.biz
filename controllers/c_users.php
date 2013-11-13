@@ -53,7 +53,7 @@ class users_controller extends base_controller {
 		
 		/* REDIRECT TO HOME PAGE*/ 
 		
- 		ROUTER::redirect('/'); */
+ 		ROUTER::redirect('/'); 
 		
 		
 	}
