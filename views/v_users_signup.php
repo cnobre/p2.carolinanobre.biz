@@ -14,7 +14,7 @@
 	</div>                    
 	
 	 <div class="form_row">
-		 <label>Password:</label><input type="text" name="password" class="contact_input" />
+		 <label>Password:</label><input type="password" name="password" class="contact_input" />
 	</div>      
 	
 	<br><br>

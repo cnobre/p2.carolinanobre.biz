@@ -1,0 +1,1 @@
+Congratulations, you have successfully signed up to the SeaBird Blog! 

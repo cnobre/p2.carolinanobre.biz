@@ -1,0 +1,63 @@
+2013-11-12 21:35:06 - INFO --> -------------------------- 
+2013-11-12 21:35:06 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:35:06 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:35:06 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:35:06 - INFO --> To: Carolina (cnobre@whoi.edu),  
+2013-11-12 21:35:06 - INFO --> CC:  
+2013-11-12 21:35:06 - INFO --> BCC:  
+2013-11-12 21:35:06 - INFO --> Subject: Successful Signup to SeaBird App! 
+2013-11-12 21:35:06 - INFO --> Body: Congratulations, you have successfully signed up for the SeaBird app! 
+2013-11-12 21:36:29 - INFO --> -------------------------- 
+2013-11-12 21:36:29 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:36:29 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:36:29 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:36:29 - INFO --> To: Carolina (cnobre@whoi.edu),  
+2013-11-12 21:36:29 - INFO --> CC:  
+2013-11-12 21:36:29 - INFO --> BCC:  
+2013-11-12 21:36:29 - INFO --> Subject: Successful Signup to SeaBird App! 
+2013-11-12 21:36:29 - INFO --> Body: Congratulations, you have successfully signed up for the SeaBird App!  
+2013-11-12 21:40:29 - INFO --> -------------------------- 
+2013-11-12 21:40:29 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:40:29 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:40:29 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:40:29 - INFO --> To: C (C), c (c),  
+2013-11-12 21:40:29 - INFO --> CC:  
+2013-11-12 21:40:29 - INFO --> BCC:  
+2013-11-12 21:40:29 - INFO --> Subject: Successful Signup to SeaBird Blog! 
+2013-11-12 21:40:29 - INFO --> Body: Congratulations, you have successfully signed up to the SeaBird Blog!  
+2013-11-12 21:42:51 - INFO --> -------------------------- 
+2013-11-12 21:42:51 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:42:51 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:42:51 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:42:51 - INFO --> To: C (C), c (c),  
+2013-11-12 21:42:51 - INFO --> CC:  
+2013-11-12 21:42:51 - INFO --> BCC:  
+2013-11-12 21:42:51 - INFO --> Subject: Successful Signup to SeaBird Blog! 
+2013-11-12 21:42:51 - INFO --> Body: Congratulations, you have successfully signed up to the SeaBird Blog!  
+2013-11-12 21:43:10 - INFO --> -------------------------- 
+2013-11-12 21:43:10 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:43:10 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:43:10 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:43:10 - INFO --> To: C (C), c (c),  
+2013-11-12 21:43:10 - INFO --> CC:  
+2013-11-12 21:43:10 - INFO --> BCC:  
+2013-11-12 21:43:10 - INFO --> Subject: Successful Signup to SeaBird Blog! 
+2013-11-12 21:43:10 - INFO --> Body: Congratulations, you have successfully signed up to the SeaBird Blog!  
+2013-11-12 21:44:13 - INFO --> -------------------------- 
+2013-11-12 21:44:13 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:44:13 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:44:13 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:44:13 - INFO --> To: C (C), c (c),  
+2013-11-12 21:44:13 - INFO --> CC:  
+2013-11-12 21:44:13 - INFO --> BCC:  
+2013-11-12 21:44:13 - INFO --> Subject: Successful Signup to SeaBird TEST! 
+2013-11-12 21:44:13 - INFO --> Body: Congratulations, you have successfully signed up to the SeaBird Blog!  
+2013-11-12 21:45:40 - INFO --> -------------------------- 
+2013-11-12 21:45:40 - INFO --> Controller/Method: users/p_signup 
+2013-11-12 21:45:40 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY carolinanobre@gmail.com 
+2013-11-12 21:45:40 - INFO --> From: SeaBird (carolinanobre@gmail.com) 
+2013-11-12 21:45:40 - INFO --> To: Carolina (cnobre@yahoo.com),  
+2013-11-12 21:45:40 - INFO --> CC:  
+2013-11-12 21:45:40 - INFO --> BCC:  
+2013-11-12 21:45:40 - INFO --> Subject: Successful Signup to SeaBird TEST! 
+2013-11-12 21:45:40 - INFO --> Body: Congratulations, you have successfully signed up to the SeaBird Blog!  

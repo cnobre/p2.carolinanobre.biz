@@ -40,9 +40,20 @@ class users_controller extends base_controller {
 		
 		DB::instance(DB_NAME)->insert_row('users',$_POST);
 		
+		#Send confirmation email upon signup
+		
+		$to[]    = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
+		$from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
+		$subject = "Successful Signup to SeaBird Yahoo!";	
+		
+ 		$body = View::instance('v_email'); 
+	
+	    # Send email
+ 		Email::send($to, $from, $subject, $body, true, ''); 
+		
 		/* REDIRECT TO HOME PAGE*/ 
 		
-		ROUTER::redirect('/');
+ 		ROUTER::redirect('/'); */
 		
 		
 	}
