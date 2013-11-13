@@ -143,9 +143,7 @@ public function reset($error = NULL) {
 			Router::redirect("/users/reset/error");
 		} 
 		
-	    send_signup_email($user_array, $subject = "Welcome!")	
-
-		
+	   		
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		$new_password = sha1(PASSWORD_SALT.$_POST['new_password']);
 		
