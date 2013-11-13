@@ -16,7 +16,7 @@
 
 <div id="main_container">
 	<div id="header">
-    	<div id="logo"><a href="/"><img src="/images/logo.png" height = "50px" alt="" title="" border="0"></a></div>
+    	<div id="logo"><a href="/"><img src="/images/logo.png" height = "50" alt="" title=""></a></div>
         
         
           <div id="menu">

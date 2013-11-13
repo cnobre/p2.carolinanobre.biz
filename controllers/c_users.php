@@ -44,7 +44,7 @@ class users_controller extends base_controller {
 		
 		$to[]    = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
 		$from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
-		$subject = "Successful Signup to SeaBird Yahoo!";	
+		$subject = "Successful Signup to SeaBird Blog!";	
 		
  		$body = View::instance('v_email'); 
 	

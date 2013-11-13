@@ -14,7 +14,7 @@ else:?>
 <?php endif; ?>
 
 <br><br>
-<img src="images/birds.png" width = "860px" alt="" title=""> 
+<img src="images/birds.png" width = "860" alt="" title=""> 
 
 <p>
 	+1 Feature - Reset Password <br>
