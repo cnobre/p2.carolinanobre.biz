@@ -32,6 +32,22 @@ class users_controller extends base_controller {
 			Router::redirect("/users/signup/error");
 		} 
 		
+		
+		
+		#Checking for duplicate emails
+				
+		$q = "SELECT * FROM users WHERE email = '".$_POST['email']."'";
+		
+		# Query Database
+		$user_exists = DB::instance(DB_NAME)->select_rows($q);
+		
+		# If email exists in database
+		if(!empty($user_exists)){
+		
+		# Send to Login page
+		Router::redirect('/users/login');
+		}
+		
 		$_POST['created'] = Time::now();
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
@@ -126,6 +142,8 @@ public function reset($error = NULL) {
 	    if("" == trim($_POST['password']) || "" == trim($_POST['new_password'])){
 			Router::redirect("/users/reset/error");
 		} 
+		
+	    send_signup_email($user_array, $subject = "Welcome!")	
 
 		
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
@@ -134,8 +152,8 @@ public function reset($error = NULL) {
 		$d = Array("password" => $new_password);
 		$where_condition = 'WHERE user_id = '.$this->user->user_id;
 		$insert  = DB::instance(DB_NAME)->update("users", $d, $where_condition);
-	
-	    				    
+		
+   				    
 	    #Success
 	    if($insert){
 		    Router::redirect('/');
